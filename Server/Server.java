@@ -23,11 +23,7 @@ import java.util.Enumeration;
  *
  * @author thinhle
  */
-public class Server extends javax.swing.JFrame {
-    ArrayList<Player> clients = new ArrayList<>();
-    Thread listener;
-    ObjectOutputStream sender = null;
-    ObjectInputStream receiver = null;
+
     
     /**
      * Creates new form Server
