@@ -95,17 +95,7 @@ public class Client extends javax.swing.JFrame implements ChessboardInterface {
         this.listener.start();
     }
 
-    private void moveOpponent(Move move) {
-        System.out.println("Opponent's move: ");
-        this.chessboard.move(move);
-        this.isMyTurn = true;
-        this.chessboard.setMessage("Your turn!");
-        if (isFirstPlayer) {
-            this.chessboard.switchTurn(1);
-        } else {
-            this.chessboard.switchTurn(2);
-        }
-    }
+    
 
     private void informResult(boolean isWinner) {
         String title = this.myName;
