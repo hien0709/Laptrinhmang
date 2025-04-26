@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
 
 /**
  *
- * @author thinhle
+ * @author HienThuongPhuong
  */
 public class Queen extends Piece {
 
@@ -39,16 +39,7 @@ public class Queen extends Piece {
             }
         }
         //all possible moves in the up positive diagonal
-        for (int i = x - 1, j = y + 1; j < 8 && i > -1; i--, j++) {
-            Point destination = new Point(i, j);
-            Piece piece = this.chessboard.getPieceAt(destination);
-            if (piece == null || (piece.isBelongToFirstPlayer() != this.isBelongToFirstPlayer())) {
-                possibleDestinations.add(destination);
-            }
-            if (piece != null) {
-                break;
-            }
-        }
+        
         //all possible moves in the up negative diagonal
         for (int i = x - 1, j = y - 1; j > -1 && i > -1; j--, i--) {
             Point destination = new Point(i, j);
@@ -61,16 +52,6 @@ public class Queen extends Piece {
             }
         }
         //all possible moves in the down negative diagonal
-        for (int i = x + 1, j = y - 1; i < 8 && j > -1; i++, j--) {
-            Point destination = new Point(i, j);
-            Piece piece = this.chessboard.getPieceAt(destination);
-            if (piece == null || (piece.isBelongToFirstPlayer() != this.isBelongToFirstPlayer())) {
-                possibleDestinations.add(destination);
-            }
-            if (piece != null) {
-                break;
-            }
-        }
         
         //all possible destinations in the up
         for (int i = y - 1; i > -1; i--) {
