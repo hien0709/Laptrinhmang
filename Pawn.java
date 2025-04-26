@@ -11,15 +11,9 @@ import java.awt.image.BufferedImage;
 
 /**
  *
- * @author thinhle
+ * @author HienThuongPhuong
  */
-public class Pawn extends Piece {
-
-    static String className = "pawn";
-
-    public Pawn(Point nowPosition, Image image, boolean isBelongToFirstPlayer, Chessboard chessboard) {
-        super(nowPosition, image, isBelongToFirstPlayer, chessboard);
-    }
+p
 
     @Override
     public void generatePossibleDestination() {
